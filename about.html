@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+    <title>Új lap - 1</title>
+    <script>
+        honapok = new Array("január", "február", "március", "április", "május", "június", "július", "augusztus", "szeptember", "november", "december")
+        napok = new Array("vasárnap", "hétfő", "kedd", "szerda", "csütörtök", "péntek", "szombat")
+
+        function idoki() {
+            var Digital = new Date();
+            var ev = Digital.getFullYear();
+            var ho = Digital.getMonth();
+            var nap = Digital.getDate();
+            var napnev = napok[Digital.getDay()]
+            var hours = Digital.getHours();
+            var minutes = Digital.getMinutes();
+            var seconds = Digital.getSeconds();
+            document.getElementById('hely').innerHTML = ev + ". " + honapok[ho] + " " + nap + ". " + napnev + " " + hours + ":" + ((minutes < 10) ? 0 : "") + minutes + ":" + ((seconds < 10) ? 0 : "") + seconds
+            //  setTimeout("idoki()",60000) // Percenként hívja csak meg, nem kell a mp. kiírás
+            setTimeout("idoki()", 1000) // Másodpercenként hívja meg, teszhez jobb
+        }
+    </script>
+
+
+</head>
+
+<body onload="idoki()">
+
+    <ul>
+        <li> <a href="/">Home</a> </li>
+    </ul>
+    <li> <a href="/pages/products.html">Products</a> </li>
+
+    </ul>
+    <li> <a href="/pages/orders.html">Orders</a> </li>
+
+    </ul>
+    <li> <a href="/about.html">About</a> </li>
+
+    </ul>
+
+    <h1>About</h1>
+
+    <table>
+        <caption>Opening hours</caption>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Open</th>
+                <th>Close</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday-Friday</td>
+                <td>09:00</td>
+                <td rowspan="2">21:00</td>
+
+
+            </tr>
+
+            <tr>
+                <td>Saturday</td>
+                <td>06:00</td>
+
+
+
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td colspan="2">Closed</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="3">
+                    &copy; 2021
+                </td>
+                </tr<>
+        </tfoot>
+
+
+    </table>
+    <fieldset>
+
+
+
+
+        <div id="hely"></div>
+
+
+
+    </fieldset>
+
+</body>
+
+</html>
