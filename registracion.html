@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Regisztráció</h1>
+    <form>  
+        <fieldset>    
+            <legend>Personalia:</legend>    
+            Name: <input type="text"><br>    
+            Email: <input type="text"><br>    
+            Date of birth: <input type="text">  
+        </fieldset> 
+    </form>
+    <h2>Hírlevél</h2>
+    <form>
+        <fieldset>
+            <legend>Személyes adatok</legend>
+            <label>Név: </label>
+            <input name="fullname" type="text" value="Kiss János" required>
+            <br>
+            <label>Hírlevél</label>
+            <input name="mail" type="checkbox" checked>
+        </fieldset>
+        <fieldset>
+            <legend>hírlevél gyakorisága</legend>
+            <p>Hírlvél gyakorisága: </p>
+            <input type="radio" name="freq" value="daily" checked> napi
+            <input type="radio" name="freq" value="weekly"> heti
+            <input type="radio" name="freq" value="monthly"> havi
+        </fieldset>
+<div>
+    <input type="button" value="megerősítés"> Köszönjük szépen!
+</div>
+    </form>
+</body>
+
+</html>
