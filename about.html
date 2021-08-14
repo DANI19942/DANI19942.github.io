@@ -3,26 +3,28 @@
 
 <head>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
-    <title>Új lap - 1</title>
-    <script>
-        honapok = new Array("január", "február", "március", "április", "május", "június", "július", "augusztus", "szeptember", "november", "december")
-        napok = new Array("vasárnap", "hétfő", "kedd", "szerda", "csütörtök", "péntek", "szombat")
+</html>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/innerHTML">
+<title>Új lap - 1</title>
+<script>
+    honapok = new Array("január", "február", "március", "április", "május", "június", "július", "augusztus", "szeptember", "november", "december")
+    napok = new Array("vasárnap", "hétfő", "kedd", "szerda", "csütörtök", "péntek", "szombat")
 
-        function idoki() {
-            var Digital = new Date();
-            var ev = Digital.getFullYear();
-            var ho = Digital.getMonth();
-            var nap = Digital.getDate();
-            var napnev = napok[Digital.getDay()]
-            var hours = Digital.getHours();
-            var minutes = Digital.getMinutes();
-            var seconds = Digital.getSeconds();
-            document.getElementById('hely').innerHTML = ev + ". " + honapok[ho] + " " + nap + ". " + napnev + " " + hours + ":" + ((minutes < 10) ? 0 : "") + minutes + ":" + ((seconds < 10) ? 0 : "") + seconds
-            //  setTimeout("idoki()",60000) // Percenként hívja csak meg, nem kell a mp. kiírás
-            setTimeout("idoki()", 1000) // Másodpercenként hívja meg, teszhez jobb
-        }
-    </script>
+    function idoki() {
+        var Digital = new Date();
+        var ev = Digital.getFullYear();
+        var ho = Digital.getMonth();
+        var nap = Digital.getDate();
+        var napnev = napok[Digital.getDay()]
+        var hours = Digital.getHours();
+        var minutes = Digital.getMinutes();
+        var seconds = Digital.getSeconds();
+        document.getElementById('hely').innerHTML = ev + ". " + honapok[ho] + " " + nap + ". " + napnev + " " + hours + ":" + ((minutes < 10) ? 0 : "") + minutes + ":" + ((seconds < 10) ? 0 : "") + seconds
+        //  setTimeout("idoki()",60000) // Percenként hívja csak meg, nem kell a mp. kiírás
+        setTimeout("idoki()", 1000) // Másodpercenként hívja meg, teszhez jobb
+    }
+</script>
 
 
 </head>
@@ -76,7 +78,7 @@
                 <td colspan="3">
                     &copy; 2021
                 </td>
-                </tr<>
+            </tr>
         </tfoot>
 
 
